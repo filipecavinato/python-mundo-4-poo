@@ -1,0 +1,41 @@
+# Script criado por Filipe Cavinato
+
+from rich import print
+
+class Caneta:
+    def __init__(self, cor):
+        self.cor = cor
+        if cor == 'azul':
+            self.cor = 'blue'
+        elif cor == 'vermelha':
+            self.cor = 'red'
+        elif cor == 'verde':
+            self.cor = 'green'
+        self.tampada = True
+
+    def destampar(self):
+        self.tampada = False
+        return self.tampada
+
+    def escrever(self, texto):
+        if self.tampada:
+            print(f' :prohibited: [{self.cor}]Caneta[/] está tampada, por favor destampe antes de usar!')
+        else:
+            print(f'[{self.cor}]{texto}[/]', end='')
+
+    def quebrar_linha(self, quantidade):
+        print('\n' * (quantidade - 1))
+
+c1 = Caneta('azul')
+c2 = Caneta('vermelha')
+c3 = Caneta('verde')
+
+c1.destampar()
+c2.destampar()
+c3.destampar()
+
+c1.escrever('Olá, tudo bem ?')
+c1.quebrar_linha(2)
+c2.escrever('Olá, Gafanhoto! ')
+c3.escrever('Vamos Exercitar!')
+print('\n------ Fim do Programa ------')
