@@ -12,11 +12,10 @@ class ControleRemoto:
 
     def controle(self):
         while True:
-            if self.ligado == False:
+            if not self.ligado:
                 conteudo = f':prohibited: A TV está desligada'
             else:
-                conteudo = f'''
-Canal = {"[on blue] 1 [/]" if self.canal == 1 else " 1 "} {"[on blue] 2 [/]" if self.canal == 2 else " 2 "} {"[on blue] 3 [/]" if self.canal == 3 else " 3 "} {"[on blue] 4 [/]" if self.canal == 4 else " 4 "} {"[on blue] 5 [/]" if self.canal == 5 else " 5 "}
+                conteudo = f'''Canal = {"[on blue] 1 [/]" if self.canal == 1 else " 1 "} {"[on blue] 2 [/]" if self.canal == 2 else " 2 "} {"[on blue] 3 [/]" if self.canal == 3 else " 3 "} {"[on blue] 4 [/]" if self.canal == 4 else " 4 "} {"[on blue] 5 [/]" if self.canal == 5 else " 5 "}
 Volume = {"[on green] [/]" * int(self.volume)}{"[on white] [/]" * (10 - int(self.volume))}'''
             painel = Panel(conteudo, title=' [ TV ] ', width=35)
             os.system('cls' if os.name == 'nt' else 'clear')
@@ -53,6 +52,6 @@ Volume = {"[on green] [/]" * int(self.volume)}{"[on white] [/]" * (10 - int(self
             elif self.canal <= 1:
                 self.canal = 5
 
-# Codigo Principal
+# Código Principal
 c1 = ControleRemoto()
 c1.controle()
