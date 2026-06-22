@@ -4,29 +4,30 @@ from rich import print
 from rich.panel import Panel
 
 class Churrasco:
-    def __init__(self, titulo, quant):
+    consumo_padrao:float = 0.400
+    preco_carne_kilo:float = 82.40
+
+    def __init__(self, titulo, quantidade):
         self.titulo = titulo
-        self.quant = quant
+        self.participantes = quantidade
 
     def analisar(self):
-        consumo_padrao = 0.400
-        preco_carne_kilo = 82.40
-        quant_carne = self.quant * consumo_padrao
-        preco_total = quant_carne * preco_carne_kilo
-        preco_pessoa = preco_total / self.quant
+        quant_carne = self.participantes * self.__class__.consumo_padrao
+        preco_total = quant_carne * self.__class__.preco_carne_kilo
+        preco_pessoa = preco_total / self.participantes
 
-        conteudo = f'''Analisando [green]{self.titulo}[/] com [blue]{self.quant} convidados[/]
-Cada Participante comerá {consumo_padrao}Kg e cada Kg custa R${preco_carne_kilo:.2f}
+        conteudo = f'''Analisando [green]{self.titulo}[/] com [blue]{self.participantes} convidados[/]
+Cada Participante comerá {self.__class__.consumo_padrao}Kg e cada Kg custa R${self.__class__.preco_carne_kilo:,.2f}
 Recomendo [blue]comprar {quant_carne:.3f}Kg[/] de carne
-O custo total será de [green]R${preco_total:.2f}[/]
-Cada pessoa pagará [yellow]R${preco_pessoa:.2f}[/] para participar.'''
+O custo total será de [green]R${preco_total:,.2f}[/]
+Cada pessoa pagará [yellow]R${preco_pessoa:,.2f}[/] para participar.'''
         painel = Panel(conteudo, title=self.titulo)
         print(painel)
 
 c1 = Churrasco('Churras dos Amigos', 15)
 c1.analisar()
 
-c2 = Churrasco('Churras dos Amigos 2ª Parte', 100)
+c2 = Churrasco('Churras dos Amigos Parte 2', 100)
 c2.analisar()
 
 print('------ Fim do Programa ------')

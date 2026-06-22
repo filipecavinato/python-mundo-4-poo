@@ -3,7 +3,7 @@
 from rich import print
 
 class Caneta:
-    def __init__(self, cor):
+    def __init__(self, cor = 'azul'):
         self.cor = cor
         if cor == 'azul':
             self.cor = 'blue'
@@ -23,8 +23,8 @@ class Caneta:
         else:
             print(f'[{self.cor}]{texto}[/]', end='')
 
-    def quebrar_linha(self, quantidade):
-        print('\n' * (quantidade - 1))
+    def quebrar_linha(self, quantidade = 1):
+        print('\n' * quantidade, end='')
 
 c1 = Caneta('azul')
 c2 = Caneta('vermelha')

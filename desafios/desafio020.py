@@ -15,8 +15,7 @@ class Gamer:
         return self.lista
 
     def ficha(self):
-        conteudo = f'''Nome Real: {self.nome}
-Jogos Favoritos:'''
+        conteudo = f'Nome Real: {self.nome}\nJogos Favoritos:'
         conteudo2 = '\n'.join(sorted(self.lista))
 
         painel = Panel(f'{conteudo}\n{conteudo2}',title=f'Jogador <{self.nick}>', width=44)

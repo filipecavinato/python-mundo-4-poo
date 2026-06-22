@@ -9,7 +9,7 @@ class Produto:
         self.preco = preco
 
     def etiqueta(self):
-        painel = Panel(f'{self.nome:^30}\n{'':.^30}\n{'R$':.>12}{self.preco:.<18.2f}', title='Produto',width=34 )
+        painel = Panel(f'{self.nome:^30}\n{'':.^30}\n{'R$':.>12}{self.preco:.<18,.2f}', title='Produto',width=34 )
         print(painel)
 
 p1 = Produto('Iphone 17 Pro Max', 25_000.85)
