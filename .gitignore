@@ -11,6 +11,9 @@ venv/
 ENV/
 env/
 
+# Configurações do PyCharm / IDE
+.idea/
+
 # Arquivos .JSOn
 *.json
 
