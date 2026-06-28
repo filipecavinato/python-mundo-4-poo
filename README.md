@@ -21,10 +21,10 @@ python pasta_do_exercicio/nome_do_arquivo.py
 
 ## 🛠️ Tecnologias
 
-Linguagem: Python 3.x
-Ambiente: PyCharm
-Bibliotecas: `random`, `time`, `datetime`, `rich`, `os`
-Versionamento: Git & GitHub
+- Linguagem: Python 3.x
+- Ambiente: PyCharm
+- Bibliotecas: `random`, `time`, `datetime`, `rich`, `os`
+- Versionamento: Git & GitHub
 
 ## 📝 Notas de Estudo
 
