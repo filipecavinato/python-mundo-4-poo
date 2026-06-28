@@ -39,7 +39,7 @@ Este repositório serve como um log do meu progresso e aprendizado. Cada pasta c
 | **Mundo 3** | [Acessar](https://github.com/filipecavinato/python-mundo-3)     |
 | **Mundo 4** | [Acessar](https://github.com/filipecavinato/python-mundo-4-poo) |
 
-### Desenvolvido por **Filipe Cavinato**
+### 👤 Desenvolvido por **Filipe Cavinato**
 <a href="https://www.linkedin.com/in/filipe-cavinato" target="_blank">
   <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
 </a>  <a href="https://github.com/filipecavinato" target="_blank">
