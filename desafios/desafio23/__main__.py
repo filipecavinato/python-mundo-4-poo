@@ -10,7 +10,7 @@ def main():
     print(f'Area = [cian]{p1.area():.1f}[/]')
 
     p2 = Circulo(20)
-    print('Circulo:')
+    print('\nCirculo:')
     print(f'Perímetro = [cian]{p2.perimetro():.1f}[/]')
     print(f'Area = [cian]{p2.area():.1f}[/]')
 
