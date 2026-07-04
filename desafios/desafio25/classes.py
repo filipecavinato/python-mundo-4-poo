@@ -3,9 +3,9 @@
 from abc import ABC, abstractmethod
 
 class Transporte(ABC):
-    def __init__(self, distancia = 0, frete = 0):
+    def __init__(self, distancia = 0):
         self.distancia = distancia
-        self.frete = frete
+        self.frete = 0
 
     @abstractmethod
     def calcular_frete(self):
