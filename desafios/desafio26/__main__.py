@@ -1,7 +1,6 @@
 # Script criado por Filipe Cavinato
 
 from classes import FuncionarioHorista, FuncionarioMensalista
-from rich.panel import Panel
 
 def main():
     f1 = FuncionarioHorista('Paulo', 12, 200)
