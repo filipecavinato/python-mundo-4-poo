@@ -1,14 +1,15 @@
 # Modulo criado por Filipe Cavinato
 
 from abc import ABC, abstractmethod
+from rich import print
 
 class BebidaQuente(ABC):
     def preparar(self):
-        print('--- Iniciando Preparo ---')
+        print(f'--- [yellow]Iniciando Preparo do {type(self).__name__}[/] ---')
         self.ferver_agua()
         self.misturar()
         self.servir()
-        print('--- Bebida Pronta ---\n')
+        print('--- [green]Bebida Pronta[/] ---\n')
 
     def ferver_agua(self):
         print('1. Fervendo Água a 100º Celsius.')

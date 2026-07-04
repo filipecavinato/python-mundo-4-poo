@@ -3,7 +3,7 @@
 from classes import Cafe, Leite, Cha
 
 def main():
-    bebida = Leite()
+    bebida = Cafe()
     bebida.preparar()
 
     bebida2 = Cha()
