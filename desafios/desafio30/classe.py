@@ -1,5 +1,5 @@
 # Classe criada por Filipe Cavinato
-from base64 import encode
+
 from hashlib import sha256
 from rich import print
 
@@ -13,17 +13,12 @@ class Credencial:
 
     @senha.setter
     def senha(self, senha):
-        senha_mestra = sha256()
-        senha_mestra.update(senha.encode('utf-8'))
-        senha_hash = senha_mestra.hexdigest()
+        senha_hash = sha256(senha.encode('utf-8')).hexdigest()
         self.__hash = senha_hash
 
     def validar(self, tentativa):
-        senha_tentativa = sha256()
-        senha_tentativa.update(tentativa.encode('utf-8'))
-        hash_hex = senha_tentativa.hexdigest()
-
-        if hash_hex == self.__hash:
+        tentativa_hash = sha256(tentativa.encode('utf-8')).hexdigest()
+        if tentativa_hash == self.__hash:
             print('Senha Confere!')
             return True
         else:
