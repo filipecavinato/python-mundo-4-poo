@@ -3,8 +3,8 @@
 from rich import print
 
 class Termostato:
-    def __init__(self, temperatura = 24):
-        self.__temperatura = temperatura
+    def __init__(self):
+        self.__temperatura = 24
 
     @property
     def ftemperatura(self):
@@ -24,5 +24,5 @@ class Termostato:
             else:
                 self.__temperatura = 30
         else:
-            print(f'[red] ERRO: Temperatura de {valor}ºC é Inválida![/]')
-        return self.__temperatura
+            raise ValueError(f'Temperatura de {valor}ºC é Inválida!')
+

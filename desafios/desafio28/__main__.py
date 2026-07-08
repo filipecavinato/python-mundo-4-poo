@@ -5,9 +5,13 @@ from rich import inspect, print
 
 def main():
     t = Termostato()
-    t.temperatura = 24
-    #inspect(t, private=True, methods=True)
-    print(f'A Temperatura atual é {t.ftemperatura}')
+    try:
+        t.temperatura = 18
+    except ValueError as erro:
+        print(f'[red] ERRO: {erro}[/]')
+
+    #inspect(t, private=True, methods=True)   # Analise de Classe usando inspect
+    print(f'A Temperatura atual é [blue]{t.ftemperatura}[/]')
 
 if __name__ == '__main__':
     main()
